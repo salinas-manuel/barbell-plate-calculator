@@ -1,0 +1,39 @@
+<md-sidenav-container fullscreen [class.dark-theme]="isDarkTheme">
+    <md-sidenav #Themes>
+    </md-sidenav>
+   <md-toolbar color="primary">
+
+      <span><button md-raised-button color="primary" [md-menu-trigger-for]="menu">
+        THEMES
+      </button></span> 
+    
+      <md-menu #menu="mdMenu">
+      <button md-menu-item>1</button>
+      <button md-menu-item>2</button>
+      <button md-menu-item>3</button>
+    </md-menu>
+    <span class="app-toolbar-filler"></span> 
+    Barbell Plate Calculator
+
+    <span class="app-toolbar-filler"></span>  
+    
+   <button md-raised-button color="primary" (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+  </md-toolbar> 
+
+
+
+  <div class="units">
+  <md-card>
+    <md-button-toggle-group>
+      <md-button-toggle [routerLink]="['/pounds']">Pounds</md-button-toggle>
+      <md-button-toggle [routerLink]="['/kilograms']">Kilograms</md-button-toggle>
+    </md-button-toggle-group>
+  </md-card> 
+    <div>
+    <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</md-sidenav-container>
+
+

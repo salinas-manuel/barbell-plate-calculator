@@ -1,0 +1,44 @@
+<md-card>
+  <md-input-container>
+    <input mdInput placeholder="Bar Weight" dividerColor="accent">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput placeholder="Total Weight" dividerColor="accent">
+  </md-input-container>
+  <span></span> 
+  <button md-raised-button color="primary">CALCULATE</button>
+</md-card>
+<md-card>
+  <md-checkbox>
+    25
+  </md-checkbox>
+  <md-checkbox [checked]="true">
+    20
+  </md-checkbox>
+  <md-checkbox [checked]="true">
+    15
+  </md-checkbox>
+  <md-checkbox [checked]="true">
+    10
+  </md-checkbox>
+  <md-checkbox [checked]="true">
+    5
+  </md-checkbox>
+  <md-checkbox [checked]="true">
+    2.5
+  </md-checkbox>
+  <md-checkbox [checked]="true">
+    1.25
+  </md-checkbox>
+</md-card>
+
+<md-card>
+    <md-card-title>Plates Required</md-card-title>
+    <md-card-content>
+      <md-grid-list cols="4" rowHeight="200px">
+        <md-grid-tile *ngFor="let plate of plates">
+        <img src="http://www.roguefitness.com/media/catalog/product/cache/1/image/1500x1500/472321edac810f9b2465a359d8cdc0b5/i/p/ipf-calibrate-plates-web{{plate.id}}.jpg" layout-fill>
+        </md-grid-tile>
+      </md-grid-list>
+    </md-card-content>
+</md-card>
