@@ -11,10 +11,11 @@
 <md-card-title>Results: {{calc_service.weight}}</md-card-title>
 </md-card>
 <md-card>
-  <md-checkbox>
-    100
+  <md-checkbox *ngFor="let plate of plates" 
+  [(ngModel)]="plate.value">
+    {{plate.weights}}
   </md-checkbox>
-  <md-checkbox [checked]="true">
+  <!-- <md-checkbox [checked]="true">
     45
   </md-checkbox>
   <md-checkbox [checked]="true">
@@ -34,7 +35,7 @@
   </md-checkbox>
   <md-checkbox>
     1.25
-  </md-checkbox>
+  </md-checkbox> -->
 </md-card>
 
 <md-card>
