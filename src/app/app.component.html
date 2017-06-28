@@ -3,21 +3,22 @@
     </md-sidenav>
    <md-toolbar color="primary">
 
-      <span><button md-raised-button color="primary" [md-menu-trigger-for]="menu">
+      <!--<span><button md-raised-button color="primary" [md-menu-trigger-for]="menu">
         THEMES
-      </button></span> 
+      </button></span> Removed, might be implemented later-->
     
       <md-menu #menu="mdMenu">
       <button md-menu-item>1</button>
       <button md-menu-item>2</button>
       <button md-menu-item>3</button>
     </md-menu>
-    <span class="app-toolbar-filler"></span> 
+     
+
     Barbell Plate Calculator
 
     <span class="app-toolbar-filler"></span>  
     
-   <button md-raised-button color="primary" (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+   <button md-raised-button color="primary" (click)="isDarkTheme = !isDarkTheme">DARK THEME</button>
   </md-toolbar> 
 
 

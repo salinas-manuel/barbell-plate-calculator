@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CalculateService } from '../calculate.service';
 
 @Component({
 	selector: 'app-kilograms',
@@ -13,13 +12,14 @@ export class KilogramsComponent{
     public idsUsed = [];
 
     plates= [
-        { weights: 25, id: 9, value: false},
-        { weights: 20, id: 8, value: true},
-        { weights: 15, id: 7, value: true},
-        { weights: 10, id: 6, value: true},
-        { weights: 5, id: 5, value: true},
-        { weights: 2.5, id: 4, value: true},
-        { weights: 1.25, id: 3, value: false},
+        { weights: 25, id: 8, value: false},
+        { weights: 20, id: 7, value: true},
+        { weights: 15, id: 6, value: true},
+        { weights: 10, id: 5, value: true},
+        { weights: 5, id: 4, value: true},
+        { weights: 2.5, id: 3, value: true},
+        { weights: 1.25, id: 2, value: true},
+        { weights: 0.5, id: 1, value: false},
      ];
 
     get selectedPlates() {
@@ -54,7 +54,7 @@ export class KilogramsComponent{
         }
         //loop that gets every other element of totalUsed array starting with the second element
         //AKA just displays the weights without their IDs        
-
+        console.log(this.idsUsed);
     return {totalUsed, any: this.idsUsed, remaining: this.weight} 
     } 
 

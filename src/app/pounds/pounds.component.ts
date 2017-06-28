@@ -12,14 +12,14 @@ export class PoundsComponent{
     public idsUsed = [];
 
     plates= [
-        { weights: 100, id: 3, value: false},
-        { weights: 45, id: 3, value: true},
-        { weights: 35, id: 4, value: true},
+        { weights: 55, id: 8, value: false},
+        { weights: 45, id: 7, value: true},
+        { weights: 35, id: 6, value: true},
         { weights: 25, id: 5, value: true},
-        { weights: 10, id: 6, value: true},
-        { weights: 5, id: 7, value: true},
-        { weights: 2.5, id: 8, value: true},
-        { weights: 1.25, id: 9, value: false},
+        { weights: 10, id: 4, value: true},
+        { weights: 5, id: 3, value: true},
+        { weights: 2.5, id: 2, value: true},
+        { weights: 1.25, id: 1, value: false},
      ];
 
     get selectedPlates() {
@@ -40,7 +40,6 @@ export class PoundsComponent{
                 this.weight -= this.selectedPlates[i].weights
                 count += 1
                     if (count >= 1){
-                        //this.exp = count;
                         // pushes the selectedPlates weights onto totalUsed array
                         totalUsed.push(this.selectedPlates[i].weights); 
                         // pushes the selectedPlates IDs onto totalUsed array
