@@ -1,49 +1,28 @@
 <md-card>
   <md-input-container>
-    <input [(ngModel)]="calc_service.barWeight" mdInput placeholder="Bar Weight" dividerColor="accent">
+    <input [(ngModel)]="barWeight" mdInput placeholder="Bar Weight" dividerColor="accent">
   </md-input-container>
   <md-input-container>
-    <input [(ngModel)]="calc_service.totalWeight" mdInput placeholder="Total Weight" dividerColor="accent">
+    <input [(ngModel)]="totalWeight" mdInput placeholder="Total Weight" dividerColor="accent">
   </md-input-container>
-  <button md-raised-button color="primary" (click)="calc_service.calc()">CALCULATE</button>
+  <button md-raised-button color="primary" (click)="calc()">CALCULATE</button>
 </md-card>
-<md-card>
-<md-card-title>Results: {{calc_service.weight}}</md-card-title>
-</md-card>
+
 <md-card>
   <md-checkbox *ngFor="let plate of plates" 
   [(ngModel)]="plate.value">
     {{plate.weights}}
   </md-checkbox>
-  <!-- <md-checkbox [checked]="true">
-    45
-  </md-checkbox>
-  <md-checkbox [checked]="true">
-    35
-  </md-checkbox>
-  <md-checkbox [checked]="true">
-    25
-  </md-checkbox>
-  <md-checkbox [checked]="true">
-    10
-  </md-checkbox>
-  <md-checkbox [checked]="true">
-    5
-  </md-checkbox>
-  <md-checkbox [checked]="true">
-    2.5
-  </md-checkbox>
-  <md-checkbox>
-    1.25
-  </md-checkbox> -->
 </md-card>
 
 <md-card>
-    <md-card-title>Plates Required</md-card-title>
+    <md-card-title>Plates Required On Each Side</md-card-title>
     <md-card-content>
-      <md-grid-list cols="4" rowHeight="200px">
-        <md-grid-tile *ngFor="let plate of plates">
-        <img src="http://www.roguefitness.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/o/rogue-calibrated-lb-steel-plates-web{{plate.id}}.jpg" layout-fill>
+      <md-grid-list cols="4" rowHeight="350px">
+        <md-grid-tile *ngFor="let idUsed of idsUsed">
+          
+              <img src="http://www.roguefitness.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/r/o/rogue-calibrated-lb-steel-plates-web{{idUsed}}.jpg" layout-fill>
+          
         </md-grid-tile>
       </md-grid-list>
     </md-card-content>
